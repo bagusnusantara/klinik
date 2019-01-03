@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('landing');
+    return view('layouts.main');
 });
+
+Route::resource('/Keluhan','KeluhanController');
+Route::resource('/TabelPR','TabelPRController');
+Route::resource('/Diagnosa','DiagnosaController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
