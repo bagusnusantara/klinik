@@ -41,7 +41,7 @@
               <a href="mailto:support@infodata.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@infodata.com</span></span></a>
             </div>
             <div class="col-lg-6 col-sm-6 col-8 header-top-right">
-            <a href="login.html" class="primary-btn text-uppercase">Masuk</a>
+            <a href="{{ url('login') }}" class="primary-btn text-uppercase">Masuk</a>
             <a href="#register" class="primary-btn text-uppercase">Daftar</a>
             </div>
           </div>
