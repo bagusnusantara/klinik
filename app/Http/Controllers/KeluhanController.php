@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
-use App\purchase_planning_hdr;
+use App\Keluhan;
 use App\Http\Controllers\Controller;
 
-class DashboardController extends Controller
+class KeluhanController extends Controller
 {
     /**
      * Create a new controller instance.
