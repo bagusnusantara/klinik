@@ -37,11 +37,12 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 col-sm-6 col-4 header-top-left">
-              <a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+953 012 3654 896</span></span></a>
-              <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@colorlib.com</span></span></a>
+              <a href="telp : 021 - 42424242 "><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">021 - 42424242</span></span></a>
+              <a href="mailto:support@infodata.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@infodata.com</span></span></a>
             </div>
             <div class="col-lg-6 col-sm-6 col-8 header-top-right">
-            <a href="#" class="primary-btn text-uppercase">Login</a>
+            <a href="login.html" class="primary-btn text-uppercase">Masuk</a>
+            <a href="#register" class="primary-btn text-uppercase">Daftar</a>
             </div>
           </div>
         </div>
@@ -54,30 +55,20 @@
           <nav id="nav-menu-container">
             <ul class="nav-menu">
               <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="features.html">Features</a></li>
-              <li><a href="doctors.html">Doctors</a></li>
-              <li><a href="departments.html">Departments</a></li>
-              <li class="menu-has-children"><a href="">Blog</a>
+              <li><a href="about.html">Profil Dokter</a></li>
+              <li class="menu-has-children"><a href="">Dashboard</a>
                 <ul>
-                  <li><a href="blog-home.html">Blog Home</a></li>
-                  <li><a href="blog-single.html">Blog Single</a></li>
-                </ul>
-              </li>
-              <li class="menu-has-children"><a href="">Pages</a>
-                <ul>
-                    <li><a href="elements.html">Elements</a></li>
-                    <li><a href="#">Item One</a></li>
-                    <li><a href="#">Item Two</a></li>
-                  <li class="menu-has-children"><a href="">Level 2 </a>
+                    <li><a href="elements.html">Keluhan</a></li>
+                  <li class="menu-has-children"><a href="">Diagnosis</a>
                     <ul>
-                      <li><a href="#">Item One</a></li>
-                      <li><a href="#">Item Two</a></li>
+                      <li><a href="#">Isi Diagnosis</a></li>
+                      <li><a href="#">Isi Tabel TPR</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#kontak">Contact</a></li>
+              <li><a href="about.html">About</a></li>
             </ul>
           </nav><!-- #nav-menu-container -->
         </div>
@@ -91,13 +82,13 @@
         <div class="row fullscreen d-flex align-items-center justify-content-center">
           <div class="banner-content col-lg-8 col-md-12">
             <h1>
-              We Care for Your Health
-              Every Moment
+              Mencegah Lebih Baik
+              dari Mengobati
             </h1>
             <p class="pt-10 pb-10 text-white">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.
+              Mulai kenali gejalanya, konsultasikan, obati :)
             </p>
-            <a href="#" class="primary-btn text-uppercase">Get Started</a>
+            <a href="#" class="primary-btn text-uppercase">Yuk Berkonsultasi!</a>
           </div>
         </div>
       </div>
@@ -105,38 +96,41 @@
     <!-- End banner Area -->
 
     <!-- Start appointment Area -->
+    <section id = "register">
     <section class="appointment-area">
       <div class="container">
         <div class="row justify-content-between align-items-center pb-120 appointment-wrap">
           <div class="col-lg-5 col-md-6 appointment-left">
             <h1>
-              Servicing Hours
+              Waktu Layanan
             </h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.
+              Demi merawat kesehatan masyarakat yang cepat, tanggap dan efisien, kami siap melayani Anda pada jam-jam berikut :
             </p>
             <ul class="time-list">
               <li class="d-flex justify-content-between">
-                <span>Monday-Friday</span>
-                <span>08.00 am - 10.00 pm</span>
+                <span>Senin - Jumat</span>
+                <span>08.00 Pagi - 10.00 Malam</span>
               </li>
               <li class="d-flex justify-content-between">
-                <span>Saturday</span>
-                <span>08.00 am - 10.00 pm</span>
+                <span>Sabtu</span>
+                <span>08.00 Pagi - 05.00 Sore</span>
               </li>
               <li class="d-flex justify-content-between">
-                <span>Sunday</span>
-                <span>08.00 am - 10.00 pm</span>
+                <span>Minggu</span>
+                <span>Tutup</span>
               </li>
             </ul>
           </div>
           <div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60">
             <form class="form-wrap" action="#">
-              <h3 class="pb-20 text-center mb-30">Book an Appointment</h3>
-              <input type="text" class="form-control" name="name" placeholder="Patient Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Name'" >
-              <input type="text" class="form-control" name="phone" placeholder="Phone " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" >
-              <input type="email" class="form-control" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" >
-              <input id="datepicker1" name="dop" class="dates form-control"  placeholder="Date of Birth" type="text">
+              <h3 class="pb-20 text-center mb-30">Daftar Sekarang</h3>
+              <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Lengkap'" >
+              <input type="email" class="form-control" name="email" placeholder="Alamat Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Email'" >
+              <input type="text" class="form-control" name="Username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" >
+              
+              <input id="datepicker1" name="dop" class="dates form-control"  placeholder="Tanggal Lahir" type="text">
+
               <div class="form-select" id="service-select">
                 <select>
                   <option data-display="">Disease Type</option>
@@ -146,14 +140,15 @@
                   <option value="4">Type Four</option>
                 </select>
               </div>
-              <input id="datepicker2" class="dates form-control"  placeholder="appointment Date" type="text">
-              <textarea name="messege" class="" rows="5" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
-              <button class="primary-btn text-uppercase">Confirm Booking</button>
+              
+              <textarea name="alamat" class="" rows="5" placeholder="Alamat Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Lengkap'"></textarea>
+              <button class="primary-btn text-uppercase">Daftar</button>
             </form>
           </div>
         </div>
       </div>
     </section>
+  </section>
     <!-- End appointment Area -->
 
     <!-- Start facilities Area -->
@@ -162,45 +157,45 @@
               <div class="row d-flex justify-content-center">
                   <div class="menu-content pb-70 col-lg-7">
                       <div class="title text-center">
-                          <h1 class="mb-10">Our Latest Facilities</h1>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. </p>
+                          <h1 class="mb-10">Fasilitas Kami</h1>
+                          <p>Nikmati berbagai kenyamanan pelayanan kami untuk Anda. </p>
                       </div>
                   </div>
               </div>
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="single-facilities">
-              <span class="lnr lnr-rocket"></span>
-              <a href="#"><h4>24/7 Emergency</h4></a>
-              <p>
-                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="single-facilities">
               <span class="lnr lnr-heart"></span>
-              <a href="#"><h4>24/7 Emergency</h4></a>
+              <a href="#"><h4>24/7 Gawat Darurat Bersalin</h4></a>
               <p>
-                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+                Siap melayani 24/7 tempat bersalin keluarga Anda
               </p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="single-facilities">
-              <span class="lnr lnr-bug"></span>
-              <a href="#"><h4>Intensive Care</h4></a>
+              <span class="lnr lnr-rocket"></span>
+              <a href="#"><h4>Pelayanan Cepat</h4></a>
               <p>
-                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+                Nikmati pelayanan Cepat, Teliti dan Ramah kami. 
               </p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="single-facilities">
-              <span class="lnr lnr-users"></span>
-              <a href="#"><h4>Family Planning</h4></a>
+              <span class="lnr lnr-arrow-right  "></span>
+              <a href="#"><h4>Perawatan Intensif</h4></a>
               <p>
-                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+                Perawatan Intensif bagi keluarga Anda 
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="single-facilities">
+              <span class="lnr lnr-users  "></span>
+              <a href="#"><h4>Keluarga Berencana (KB)</h4></a>
+              <p>
+                Membantu dalam konsultasi perencanaan Keluarga Berencana Anda.
               </p>
             </div>
           </div>
@@ -209,65 +204,7 @@
     </section>
     <!-- End facilities Area -->
 
-
-    <!-- Start offered-service Area -->
-    <section class="offered-service-area section-gap">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8 offered-left">
-            <h1 class="text-white">Our Offered Services</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.
-            </p>
-            <div class="service-wrap row">
-              <div class="col-lg-6 col-md-6">
-                <div class="single-service">
-                  <div class="thumb">
-                    <img class="img-fluid" src="img/s1.jpg" alt="">
-                  </div>
-                  <a href="#">
-                    <h4 class="text-white">Cardiac Treatment</h4>
-                  </a>
-                  <p>
-                    inappropriate behavior Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <div class="single-service">
-                  <div class="thumb">
-                    <img class="img-fluid" src="img/s2.jpg" alt="">
-                  </div>
-                  <a href="#">
-                    <h4 class="text-white">Routine Checkup</h4>
-                  </a>
-                  <p>
-                    inappropriate behavior Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="offered-right relative">
-              <div class="overlay overlay-bg"></div>
-              <h3 class="relative text-white">Departments</h3>
-              <ul class="relative dep-list">
-                <li><a href="#">Pediatric Diagnosis</a></li>
-                <li><a href="#">Outpatient Rehabilitation</a></li>
-                <li><a href="#">Laryngological Functions</a></li>
-                <li><a href="#">Ophthalmology Unit</a></li>
-                <li><a href="#">Cardiac Unit</a></li>
-                <li><a href="#">Outpatient Surgery</a></li>
-                <li><a href="#">Gynaecological Wings</a></li>
-              </ul>
-              <a class="viewall-btn" href="#">View all Department</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End offered-service Area -->
+>
 
     <!-- Start team Area -->
       <section class="team-area section-gap">
@@ -275,8 +212,8 @@
               <div class="row d-flex justify-content-center">
                   <div class="menu-content pb-70 col-lg-7">
                       <div class="title text-center">
-                          <h1 class="mb-10">Our Consultants</h1>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                          <h1 class="mb-10">Dokter Kami</h1>
+                          <p>Professional, Komunikatif, dan Ramah. </p>
                       </div>
                   </div>
               </div>
@@ -354,79 +291,7 @@
       </section>
       <!-- End team Area -->
 
-    <!-- Start feedback Area -->
-    <section class="feedback-area section-gap relative">
-      <div class="overlay overlay-bg"></div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 pb-60 header-text text-center">
-            <h1 class="mb-10 text-white">Enjoy our Client’s Feedback</h1>
-            <p class="text-white">
-              Who are in extremely love with eco friendly system..
-            </p>
-          </div>
-        </div>
-        <div class="row feedback-contents justify-content-center align-items-center">
-          <div class="col-lg-6 feedback-left relative d-flex justify-content-center align-items-center">
-            <div class="overlay overlay-bg"></div>
-            <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-btn.png" alt=""></a>
-          </div>
-          <div class="col-lg-6 feedback-right">
-            <div class="active-review-carusel">
-              <div class="single-feedback-carusel">
-                <img src="img/r1.png" alt="">
-                <div class="title d-flex flex-row">
-                  <h4 class="text-white pb-10">Fannie Rowe</h4>
-                  <div class="star">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                  </div>
-                </div>
-                <p class="text-white">
-                  Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-                </p>
-              </div>
-              <div class="single-feedback-carusel">
-                <img src="img/r1.png" alt="">
-                <div class="title d-flex flex-row">
-                  <h4 class="text-white pb-10">Fannie Rowe</h4>
-                  <div class="star">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                  </div>
-                </div>
-                <p class="text-white">
-                  Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-                </p>
-              </div>
-              <div class="single-feedback-carusel">
-                <img src="img/r1.png" alt="">
-                <div class="title d-flex flex-row">
-                  <h4 class="text-white pb-10">Fannie Rowe</h4>
-                  <div class="star">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked	"></span>
-                  </div>
-                </div>
-                <p class="text-white">
-                  Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End feedback Area -->
+   
 
       <!-- Start brands Area -->
       <section class="brands-area">
@@ -454,118 +319,39 @@
       </section>
       <!-- End brands Area -->
 
-    <!-- Start recent-blog Area -->
-    <section class="recent-blog-area section-gap">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 pb-60 header-text">
-            <h1>Our Recent Blogs</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="single-recent-blog col-lg-4 col-md-4">
-            <div class="thumb">
-              <img class="f-img img-fluid mx-auto" src="img/b1.jpg" alt="">
-            </div>
-            <a href="#">
-              <h4>Portable Fashion for women</h4>
-            </a>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea.
-            </p>
-            <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-              <div>
-                <img class="img-fluid" src="img/user.png" alt="">
-                <a href="#"><span>Mark Wiens</span></a>
-              </div>
-              <div class="meta">
-                13th Dec
-                <span class="lnr lnr-heart"></span> 15
-                <span class="lnr lnr-bubble"></span> 04
-              </div>
-            </div>
-          </div>
-          <div class="single-recent-blog col-lg-4 col-md-4">
-            <div class="thumb">
-              <img class="f-img img-fluid mx-auto" src="img/b2.jpg" alt="">
-            </div>
-            <a href="#">
-              <h4>Summer ware are coming</h4>
-            </a>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea.
-            </p>
-            <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-              <div>
-                <img class="img-fluid" src="img/user.png" alt="">
-                <a href="#"><span>Mark Wiens</span></a>
-              </div>
-              <div class="meta">
-                13th Dec
-                <span class="lnr lnr-heart"></span> 15
-                <span class="lnr lnr-bubble"></span> 04
-              </div>
-            </div>
-          </div>
-          <div class="single-recent-blog col-lg-4 col-md-4">
-            <div class="thumb">
-              <img class="f-img img-fluid mx-auto" src="img/b3.jpg" alt="">
-            </div>
-            <a href="#">
-              <h4>Summer ware are coming</h4>
-            </a>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea.
-            </p>
-            <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-              <div>
-                <img class="img-fluid" src="img/user.png" alt="">
-                <a href="#"><span>Mark Wiens</span></a>
-              </div>
-              <div class="meta">
-                13th Dec
-                <span class="lnr lnr-heart"></span> 15
-                <span class="lnr lnr-bubble"></span> 04
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end recent-blog Area -->
+    
 
     <!-- start footer Area -->
+    <section id = "kontak">
     <footer class="footer-area section-gap">
       <div class="container">
         <div class="row">
           <div class="col-lg-2  col-md-6">
             <div class="single-footer-widget">
-              <h6>Top Products</h6>
+              <h6>Layanan</h6>
               <ul class="footer-nav">
-                <li><a href="#">Managed Website</a></li>
-                <li><a href="#">Manage Reputation</a></li>
-                <li><a href="#">Power Tools</a></li>
-                <li><a href="#">Marketing Service</a></li>
+                <li><a href="#">Management Website</a></li>
+                <li><a href="#">Konsultasi</a></li>
+                <li><a href="#">Keluarga Berencana</a></li>
               </ul>
             </div>
           </div>
+         
           <div class="col-lg-4  col-md-6">
             <div class="single-footer-widget mail-chimp">
-              <h6 class="mb-20">Contact Us</h6>
+              <h6 class="mb-20">Hubungi Kami</h6>
               <p>
-                56/8, Santa bullevard, Rocky beach, San fransisco, Los angeles, USA
+                Klinik Bersalin Darma Husada, Sukolilo, Surabaya. 60111
               </p>
-              <h3>012-6532-568-9746</h3>
-              <h3>012-6532-568-97468</h3>
+              <h3>021-78787878</h3>
+              <h3>0812 3543 1313</h3>
             </div>
           </div>
+   
           <div class="col-lg-6  col-md-12">
             <div class="single-footer-widget newsletter">
-              <h6>Newsletter</h6>
-              <p>You can trust us. we only send promo offers, not a single spam.</p>
+              <h6>Berita Kesehatan</h6>
+              <p>Dapatkan artikel dan berita tentang kesehatan ibu dan janin Anda.</p>
               <div id="mc_embed_signup">
                 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
 
@@ -575,7 +361,7 @@
                     </div>
 
                     <div class="col-lg-4 col-md-12">
-                      <button class="nw-btn primary-btn circle">Subscribe<span class="lnr lnr-arrow-right"></span></button>
+                      <button class="nw-btn primary-btn circle">Berlangganan<span class="lnr lnr-arrow-right"></span></button>
                     </div>
                   </div>
                   <div class="info"></div>
@@ -587,7 +373,7 @@
 
         <div class="row footer-bottom d-flex justify-content-between">
           <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://infodata.co.id" target="_blank">PT. Infodata</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           <div class="col-lg-4 col-sm-12 footer-social">
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -598,6 +384,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
       </div>
     </footer>
+  </section>
     <!-- End footer Area -->
 
 
