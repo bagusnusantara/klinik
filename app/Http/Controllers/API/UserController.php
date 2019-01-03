@@ -18,8 +18,8 @@ public $successStatus = 200;
         if(Auth::attempt(['name' => request('name'), 'password' => request('password')])){
             $user = Auth::user();
             $success['token'] =  $user->createToken('MyApp')-> accessToken;
-            //return response()->json(array('user' => $user,'token' => $success), $this-> successStatus);
-            return response()->json(array($user,$success), $this-> successStatus);
+            return response()->json(array('user' => $user,'token' => $success), $this-> successStatus);
+            //return response()->json(array($user,$success), $this-> successStatus);
             //return response()->json( $success, $this-> successStatus);
         }
         else{
