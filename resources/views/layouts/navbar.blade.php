@@ -7,7 +7,9 @@
           <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@colorlib.com</span></span></a>
         </div>
         <div class="col-lg-6 col-sm-6 col-8 header-top-right">
-        <a href="#" class="primary-btn text-uppercase">Login</a>
+          <!-- Authentication Links -->
+
+        <!-- <a href="{{ url('logout') }}" class="primary-btn text-uppercase">Logout</a> -->
         </div>
       </div>
     </div>
@@ -20,30 +22,52 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="doctors.html">Doctors</a></li>
-          <li><a href="departments.html">Departments</a></li>
-          <li class="menu-has-children"><a href="">Blog</a>
+          <li><a href="about.html">Profil Dokter</a></li>
+          <li class="menu-has-children"><a href="">Dashboard</a>
             <ul>
-              <li><a href="blog-home.html">Blog Home</a></li>
-              <li><a href="blog-single.html">Blog Single</a></li>
-            </ul>
-          </li>
-          <li class="menu-has-children"><a href="">Pages</a>
-            <ul>
-                <li><a href="elements.html">Elements</a></li>
-                <li><a href="#">Item One</a></li>
-                <li><a href="#">Item Two</a></li>
-              <li class="menu-has-children"><a href="">Level 2 </a>
+                <li><a href="elements.html">Keluhan</a></li>
+              <li class="menu-has-children"><a href="">Diagnosis</a>
                 <ul>
-                  <li><a href="#">Item One</a></li>
-                  <li><a href="#">Item Two</a></li>
+                  <li><a href="#">Isi Diagnosis</a></li>
+                  <li><a href="#">Isi Tabel TPR</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#kontak">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>@guest
+              <li class="nav-item">
+                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+              </li>
+              @if (Route::has('register'))
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                  </li>
+              @endif
+          @else
+              <li class="nav-item dropdown">
+                  <a  class="menu-has-children" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                      {{ Auth::user()->name }} <span class="caret"></span>
+                  </a>
+
+                  <ul>
+                        <li>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        </li>
+                  </ul>
+
+              </li>
+          @endguest</li>
+
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

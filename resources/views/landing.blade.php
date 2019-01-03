@@ -123,12 +123,73 @@
             </ul>
           </div>
           <div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60">
-            <form class="form-wrap" action="#">
+            <form class="form-wrap" method="POST" action="{{ route('register') }}">
+                @csrf
+                <h3 class="pb-20 text-center mb-30">Daftar Sekarang</h3>
+                <div class="form-group row">
+                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nama') }}</label>
+
+                    <div class="col-md-6">
+                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+
+                        @if ($errors->has('name'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('name') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                    <div class="col-md-6">
+                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+
+                        @if ($errors->has('email'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                    <div class="col-md-6">
+                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                        @if ($errors->has('password'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Konfirmasi Password') }}</label>
+
+                    <div class="col-md-6">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-0">
+                    <div class="col-md-6 offset-md-4">
+                        <button type="submit" class="primary-btn text-uppercase">
+                            {{ __('Daftar') }}
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!-- <form class="form-wrap" action="#">
               <h3 class="pb-20 text-center mb-30">Daftar Sekarang</h3>
               <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nama Lengkap'" >
               <input type="email" class="form-control" name="email" placeholder="Alamat Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Email'" >
               <input type="text" class="form-control" name="Username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" >
-              
+
               <input id="datepicker1" name="dop" class="dates form-control"  placeholder="Tanggal Lahir" type="text">
 
               <div class="form-select" id="service-select">
@@ -140,10 +201,10 @@
                   <option value="4">Type Four</option>
                 </select>
               </div>
-              
+
               <textarea name="alamat" class="" rows="5" placeholder="Alamat Lengkap" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Alamat Lengkap'"></textarea>
               <button class="primary-btn text-uppercase">Daftar</button>
-            </form>
+            </form> -->
           </div>
         </div>
       </div>
@@ -177,7 +238,7 @@
               <span class="lnr lnr-rocket"></span>
               <a href="#"><h4>Pelayanan Cepat</h4></a>
               <p>
-                Nikmati pelayanan Cepat, Teliti dan Ramah kami. 
+                Nikmati pelayanan Cepat, Teliti dan Ramah kami.
               </p>
             </div>
           </div>
@@ -186,7 +247,7 @@
               <span class="lnr lnr-arrow-right  "></span>
               <a href="#"><h4>Perawatan Intensif</h4></a>
               <p>
-                Perawatan Intensif bagi keluarga Anda 
+                Perawatan Intensif bagi keluarga Anda
               </p>
             </div>
           </div>
@@ -291,7 +352,7 @@
       </section>
       <!-- End team Area -->
 
-   
+
 
       <!-- Start brands Area -->
       <section class="brands-area">
@@ -319,7 +380,7 @@
       </section>
       <!-- End brands Area -->
 
-    
+
 
     <!-- start footer Area -->
     <section id = "kontak">
@@ -336,7 +397,7 @@
               </ul>
             </div>
           </div>
-         
+
           <div class="col-lg-4  col-md-6">
             <div class="single-footer-widget mail-chimp">
               <h6 class="mb-20">Hubungi Kami</h6>
@@ -347,7 +408,7 @@
               <h3>0812 3543 1313</h3>
             </div>
           </div>
-   
+
           <div class="col-lg-6  col-md-12">
             <div class="single-footer-widget newsletter">
               <h6>Berita Kesehatan</h6>

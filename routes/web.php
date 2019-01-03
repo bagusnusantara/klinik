@@ -14,14 +14,10 @@
 Route::get('/', function () {
     return view('landing');
 });
-
+Route::resource('/Dashboard','DashController');
 Route::resource('/Keluhan','KeluhanController');
 Route::resource('/TabelPR','TabelPRController');
 Route::resource('/Diagnosa','DiagnosaController');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
