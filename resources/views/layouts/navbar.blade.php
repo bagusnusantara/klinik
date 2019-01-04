@@ -21,10 +21,8 @@
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Profil Dokter</a></li>
           <li class="menu-has-children"><a href="">Dashboard</a>
-            <ul>
+            <!-- <ul>
                 <li><a href="elements.html">Keluhan</a></li>
               <li class="menu-has-children"><a href="">Diagnosis</a>
                 <ul>
@@ -32,10 +30,10 @@
                   <li><a href="#">Isi Tabel TPR</a></li>
                 </ul>
               </li>
-            </ul>
+            </ul> -->
           </li>
-          <li><a href="#kontak">Contact</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="{{ url('Periksa')}}">Periksa</a></li>
+          <li><a href="{{ url('RekamMedis')}}">Rekam Medis</a></li>
           <li>@guest
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

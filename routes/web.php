@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('landing');
 });
 Route::resource('/Dashboard','DashController');
-Route::resource('/Keluhan','KeluhanController');
+Route::resource('/Periksa','PeriksaController');
+Route::resource('/RekamMedis','RekamMedisController');
 // Route::resource('/TabelPR','TabelPRController');
 // Route::resource('/Diagnosa','DiagnosaController');
 

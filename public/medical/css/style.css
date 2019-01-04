@@ -1,128 +1,87 @@
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+
+
+html,body{
+background-image: url('../img/handbayi.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: helvetica, sans-serif;
 }
 
-body, html, .login_form {
-  height: 100%;
+.container{
+height: 100%;
+align-content: center;
 }
 
-body {
-  background: url(../img/hero-bg.jpg) right;
-  background-size: cover;
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
 }
 
-.login_form {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-flex: center;
-  -moz-box-flex: center;
-  -webkit-flex: center;
-  -ms-flex: center;
-  flex: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-align-items: center;
-  align-items: center;
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
 }
 
-.login-wrapper {
-  max-width: 400px;
-  width: 100%;
+.social_icon span:hover{
+color: white;
+cursor: pointer;
 }
 
-.logo {
-  text-align: center;
-}
-.logo img {
-  max-width: 150px;
-  width: 80%;
-  margin: 1em auto 2em;
+.card-header h3{
+color: white;
 }
 
-form {
-  background: #7c7a7a;
-  opacity: 0.85;
-  padding: 2em 1em;
-  font-family: helvetica, sans-serif;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-form label {
-  color: #fff;
-  margin: 0 3% .25em;
-  display: block;
-  font-family: helvetica, sans-serif;
-}
-form input {
-  width: 94%;
-  padding: .5em .25em;
-  margin: 0 3% 1em;
-  font-size: 1.2em;
-  border: 2px solid #000;
-  outline: none;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -ms-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-form input.password {
-  padding-right: 4rem;
-}
-form input:focus {
-  border: 2px solid #1fd100;
-}
-form button {
-  width: 90%;
-  margin: 2em 3% 0;
-  border: none;
-  background: #01ad3a;
-  padding: 1em 0;
-  font-size: 1.25em;
-  clear: both;
-  color: #000;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-  outline: none;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -ms-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-  cursor: pointer;
-}
-form button:focus, form button:hover {
-  background: #1da31b;
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
 }
 
-.hide-show {
-  width: 94%;
-  margin: -3.62em 3% 0 1.5%;
-  position: relative;
-  z-index: 5;
-  display: none;
+.input-group-prepend span{
+width: 50px;
+background-color: #12c930;
+color: black;
+border:0 !important;
 }
-.hide-show span {
-  background: #1da31b;
-  font-size: 1em;
-  padding: .5em;
-  float: right;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  cursor: pointer;
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #12c930;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
 }
