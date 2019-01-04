@@ -26,6 +26,11 @@ public $successStatus = 200;
             return response()->json(['error'=>'Unauthorised'], 401);
         }
     }
+
+    public function get_user_by_id($id){
+        $user = User::find($id);
+        return response()->json(array('user' => $user), $this->successStatus);
+    }
 /**
      * Register api
      *

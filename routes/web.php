@@ -16,8 +16,8 @@ Route::get('/', function () {
 });
 Route::resource('/Dashboard','DashController');
 Route::resource('/Keluhan','KeluhanController');
-Route::resource('/TabelPR','TabelPRController');
-Route::resource('/Diagnosa','DiagnosaController');
+// Route::resource('/TabelPR','TabelPRController');
+// Route::resource('/Diagnosa','DiagnosaController');
 
 Auth::routes();
 

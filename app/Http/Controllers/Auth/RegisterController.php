@@ -53,6 +53,11 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
             'nik' => ['required','unique:users'],
+            'tempat_lahir' => ['required'],
+            'alamat_tinggal' => ['required'],
+            'alamat_asal' => ['required'],
+            'no_telp' => ['required'],
+            'pekerjaan' => ['required'],
         ]);
     }
 
@@ -69,8 +74,15 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'nik' => $data['nik'],
+            'tempat_lahir' => $data['tempat_lahir'],
+            'tgl_lahir' => $data['tgl_lahir'],
+            'alamat_tinggal' => $data['alamat_tinggal'],
+            'alamat_asal' => $data['alamat_asal'],
+            'no_telp' => $data['no_telp'],
+            'pekerjaan' => $data['pekerjaan'],
         ]);
-
+       //  $date = str_replace("-", "", $request->tgl_lahir);
+       // $siswa['tgl_lahir'] = Carbon::parse($date)->format('Y-m-d');
     }
     // protected function create(Request $request)
     // {
