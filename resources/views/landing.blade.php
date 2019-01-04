@@ -176,6 +176,13 @@
                     </div>
                 </div>
 
+                <div class="form-group row">
+                    <label for="nik" class="col-md-4 col-form-label text-md-right">{{ __('NIK') }}</label>
+                    <div class="col-md-6">
+                        <input id="nik" type="text" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ old('nik') }}" required autofocus>
+                    </div>
+                </div>
+
                 <div class="form-group row mb-0">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="primary-btn text-uppercase">
