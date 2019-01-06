@@ -12,6 +12,6 @@ class DokterController extends Controller
 
     public function getDokterByID($id) {
     	$user = User::find($id);
-    	return response()->json(array('user' => $user), $this->successStatus);
+    	return response()->json($user, $this->successStatus);
     }
 }

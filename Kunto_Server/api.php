@@ -18,6 +18,7 @@ Route::get('details', 'API\UserController@details');
 
 Route::group(['middleware' => ['pasien']], function() {
     Route::get('pasien/profile/{id}', 'API\PasienController@getPasienByID');
+    Route::get('pasien/keluhan/{id}', 'API\PasienController@getListKeluhanByID');
 });
 
 Route::group(['middleware' => ['dokter']], function() {

@@ -22,9 +22,9 @@ class PasienMiddleware
                 return $next($request);
             }
 
-            return response()->json(array('error' => 'Anda tidak memiliki akses sebagai pasien'), 405);
+            return response()->json(['error' => 'Anda tidak memiliki akses sebagai pasien'], 405);
         }
 
-        return response()->json(array('error' => 'Unauthorized'), 401);
+        return response()->json(['error' => 'Unauthorized'], 401);
     }
 }
