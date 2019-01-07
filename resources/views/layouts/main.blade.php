@@ -45,5 +45,6 @@
     <script src="{{ asset('medical/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('medical/js/mail-script.js') }}"></script>
     <script src="{{ asset('medical/js/main.js') }}"></script>
+    @include('layouts.js')
   </body>
 </html>

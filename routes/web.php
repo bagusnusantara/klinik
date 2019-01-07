@@ -17,8 +17,9 @@ Route::get('/', function () {
 Route::resource('/Dashboard','DashController');
 Route::resource('/Periksa','PeriksaController');
 Route::resource('/RekamMedis','RekamMedisController');
-// Route::resource('/TabelPR','TabelPRController');
-// Route::resource('/Diagnosa','DiagnosaController');
+Route::resource('/TabelPR','TabelPRController');
+Route::resource('/Diagnosa','DiagnosaController');
+Route::resource('/ListPasien','ListPasienController');
 
 Auth::routes();
 

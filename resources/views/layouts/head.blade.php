@@ -11,7 +11,7 @@
 <!-- meta character set -->
 <meta charset="UTF-8">
 <!-- Site Title -->
-<title>Medical</title>
+<title>3D-QlinikⓇ</title>
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
   <!--
@@ -27,3 +27,6 @@
   <link rel="stylesheet" href="{{ asset('medical/css/owl.carousel.css') }}">
   <link rel="stylesheet" href="{{ asset('medical/css/jquery-ui.css') }}">
   <link rel="stylesheet" href="{{ asset('medical/css/main.css') }}">
+
+  <!-- Page level plugin CSS-->
+  <link href="{{ asset('assets/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">

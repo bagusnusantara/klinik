@@ -3,8 +3,8 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 col-sm-6 col-4 header-top-left">
-          <a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+953 012 3654 896</span></span></a>
-          <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@colorlib.com</span></span></a>
+          <a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">021 - 42424242</span></span></a>
+          <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@infodata.com</span></span></a>
         </div>
         <div class="col-lg-6 col-sm-6 col-8 header-top-right">
           <!-- Authentication Links -->
@@ -21,19 +21,14 @@
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-has-children"><a href="">Dashboard</a>
-            <!-- <ul>
-                <li><a href="elements.html">Keluhan</a></li>
-              <li class="menu-has-children"><a href="">Diagnosis</a>
-                <ul>
-                  <li><a href="#">Isi Diagnosis</a></li>
-                  <li><a href="#">Isi Tabel TPR</a></li>
-                </ul>
-              </li>
-            </ul> -->
-          </li>
+          @can('isPasien')
+          <li class="menu-has-children"><a href="{{ url('Dashboard')}}">Dashboard</a></li>
           <li><a href="{{ url('Periksa')}}">Periksa</a></li>
-          <li><a href="{{ url('RekamMedis')}}">Rekam Medis</a></li>
+          @endcan
+          @can('isDokter')
+          <li><a href="{{ url('ListPasien')}}">List Antrian Pasien</a></li>
+          <li><a href="{{ url('RekamMedis')}}">Histori Rekam Medis</a></li>
+          @endcan
           <li>@guest
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

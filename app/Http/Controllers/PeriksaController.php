@@ -29,7 +29,8 @@ class PeriksaController extends Controller
      */
      public function index()
       {
-           return view('pasien.keluhan.create');
+           $keluhan_list = Keluhan::all()->where('id_user',\Auth::user()->id);
+           return view('pasien.keluhan.create',compact('keluhan_list'));
       }
 
       public function store(Request $request)

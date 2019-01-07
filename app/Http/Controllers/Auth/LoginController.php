@@ -25,7 +25,24 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/Dashboard';
+     protected function authenticated($request, $user){
+         if($user->roles=='dokter'){
+           return redirect('ListPasien') ;
+          }
+        elseif($user->roles=='pasien'){
+          return redirect('Dashboard') ;
+          }
+       // if($request->user()->getUserRole('dokter')){
+       //   return redirect('ListPasien');
+       //   //return response()->json($request->user()->getUserRole());
+       // }
+       // else if ($request->user()->getUserRole('pasien')) {
+       //   return redirect('Dashboard');
+       //   //return response()->json($request->user()->getUserRole());
+       // }
+     }
+
+    //protected $redirectTo = '/Dashboard';
 
     /**
      * Create a new controller instance.

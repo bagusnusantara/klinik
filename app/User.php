@@ -16,8 +16,19 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','nik','tempat_lahir','tgl_lahir','jenis_kelamin',
-        'st_agama_kode','alamat_tinggal','alamat_asal','no_telp','pekerjaan',
+        'name', 
+        'email', 
+        'password',
+        'nik',
+        'tempat_lahir',
+        'tgl_lahir',
+        'jenis_kelamin',
+        'st_agama_kode',
+        'alamat_tinggal',
+        'alamat_asal',
+        'no_telp',
+        'pekerjaan',
+        'roles', 
     ];
 
     /**
@@ -28,4 +39,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getUserRole() {
+        return $this->roles;
+    }
 }

@@ -4,7 +4,15 @@
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
       <div class="about-content col-lg-12">
-        
+        @if ((url()->current()) == (url('/Dashboard')))
+        <h1 class="text-white">
+            Dashboard
+				</h1>
+        @elseif ((url()->current()) == (url('/Periksa')))
+        <h1 class="text-white">
+            Periksa
+				</h1>
+        @endif
       </div>
     </div>
   </div>

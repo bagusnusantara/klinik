@@ -54,9 +54,9 @@
           </div>
           <nav id="nav-menu-container">
             <ul class="nav-menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">Profil Dokter</a></li>
-              <li class="menu-has-children"><a href="">Dashboard</a>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#dokter">Profil Dokter</a></li>
+              <!-- <li class="menu-has-children"><a href="">Dashboard</a>
                 <ul>
                     <li><a href="elements.html">Keluhan</a></li>
                   <li class="menu-has-children"><a href="">Diagnosis</a>
@@ -66,9 +66,9 @@
                     </ul>
                   </li>
                 </ul>
-              </li>
-              <li><a href="#kontak">Contact</a></li>
-              <li><a href="about.html">About</a></li>
+              </li> -->
+              <li><a href="#about">Tentang Kami</a></li>
+              <li><a href="#kontak">Kontak</a></li>
             </ul>
           </nav><!-- #nav-menu-container -->
         </div>
@@ -88,7 +88,7 @@
             <p class="pt-10 pb-10 text-white">
               Mulai kenali gejalanya, konsultasikan, obati :)
             </p>
-            <a href="#" class="primary-btn text-uppercase">Yuk Berkonsultasi!</a>
+            <a href="{{ url('login') }}" class="primary-btn text-uppercase">Yuk Berkonsultasi!</a>
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@
     <!-- End appointment Area -->
 
     <!-- Start facilities Area -->
-    <section class="facilities-area section-gap">
+    <section class="facilities-area section-gap" id = "about">
       <div class="container">
               <div class="row d-flex justify-content-center">
                   <div class="menu-content pb-70 col-lg-7">
@@ -207,90 +207,83 @@
 
 >
 
-    <!-- Start team Area -->
-      <section class="team-area section-gap">
-          <div class="container">
-              <div class="row d-flex justify-content-center">
-                  <div class="menu-content pb-70 col-lg-7">
-                      <div class="title text-center">
-                          <h1 class="mb-10">Dokter Kami</h1>
-                          <p>Professional, Komunikatif, dan Ramah. </p>
+<!-- Start team Area -->
+  <section class="team-area section-gap" id="dokter">
+      <div class="container">
+          <div class="row d-flex justify-content-center">
+              <div class="menu-content pb-70 col-lg-7">
+                  <div class="title text-center">
+                      <h1 class="mb-10">Dokter Kami</h1>
+                      <p>Professional, Komunikatif, dan Ramah. </p>
+                  </div>
+              </div>
+          </div>
+          <div class="row justify-content-center d-flex align-items-center">
+              <div class="col-lg-3 col-md-6 single-team">
+                  <div class="thumb">
+                      <img class="img-fluid" src="{{ asset('medical/img/t1.jpg') }}" alt="">
+                      <div class="align-items-end justify-content-center d-flex">
+            <div class="social-links">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+                          <p>
+                            inappropriate behavior
+                          </p>
+                          <h4>Andy Florence</h4>
                       </div>
                   </div>
               </div>
-              <div class="row justify-content-center d-flex align-items-center">
-                  <div class="col-lg-3 col-md-6 single-team">
-                      <div class="thumb">
-                          <img class="img-fluid" src="img/t1.jpg" alt="">
-                          <div class="align-items-end justify-content-center d-flex">
-                <div class="social-links">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                  <a href="#"><i class="fa fa-behance"></i></a>
-                </div>
-                              <p>
-                                inappropriate behavior
-                              </p>
-                              <h4>Andy Florence</h4>
-                          </div>
+              <div class="col-lg-3 col-md-6 single-team">
+                  <div class="thumb">
+                      <img class="img-fluid" src="{{ asset('medical/img/t2.jpg') }}" alt="">
+                      <div class="align-items-end justify-content-center d-flex">
+            <div class="social-links">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+                          <p>
+                            inappropriate behavior
+                          </p>
+                          <h4>Andy Florence</h4>
                       </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 single-team">
-                      <div class="thumb">
-                          <img class="img-fluid" src="img/t2.jpg" alt="">
-                          <div class="align-items-end justify-content-center d-flex">
-                <div class="social-links">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                  <a href="#"><i class="fa fa-behance"></i></a>
-                </div>
-                              <p>
-                                inappropriate behavior
-                              </p>
-                              <h4>Andy Florence</h4>
-                          </div>
+              </div>
+              <div class="col-lg-3 col-md-6 single-team">
+                  <div class="thumb">
+                      <img class="img-fluid" src="{{ asset('medical/img/t3.jpg')}}" alt="">
+                      <div class="align-items-end justify-content-center d-flex">
+            <div class="social-links">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+                          <p>
+                            inappropriate behavior
+                          </p>
+                          <h4>Andy Florence</h4>
                       </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 single-team">
-                      <div class="thumb">
-                          <img class="img-fluid" src="img/t3.jpg" alt="">
-                          <div class="align-items-end justify-content-center d-flex">
-                <div class="social-links">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                  <a href="#"><i class="fa fa-behance"></i></a>
-                </div>
-                              <p>
-                                inappropriate behavior
-                              </p>
-                              <h4>Andy Florence</h4>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 single-team">
-                      <div class="thumb">
-                          <img class="img-fluid" src="img/t4.jpg" alt="">
-                          <div class="align-items-end justify-content-center d-flex">
-                <div class="social-links">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                  <a href="#"><i class="fa fa-behance"></i></a>
-                </div>
-                              <p>
-                                inappropriate behavior
-                              </p>
-                              <h4>Andy Florence</h4>
-                          </div>
+              </div>
+              <div class="col-lg-3 col-md-6 single-team">
+                  <div class="thumb">
+                      <img class="img-fluid" src="{{ asset('medical/img/t4.jpg')}}" alt="">
+                      <div class="align-items-end justify-content-center d-flex">
+            <div class="social-links">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+                          <p>
+                            inappropriate behavior
+                          </p>
+                          <h4>Andy Florence</h4>
                       </div>
                   </div>
               </div>
           </div>
-      </section>
-      <!-- End team Area -->
+      </div>
+  </section>
+  <!-- End team Area -->
+
 
 
 
@@ -319,6 +312,11 @@
           </div>
       </section>
       <!-- End brands Area -->
+
+      <section class="maps googleapis">
+        <p> <h1><center>Temukan Kami </h1></p>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width=100% height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=ITS%20surabaya&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </section>
 
 
 

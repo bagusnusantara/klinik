@@ -11,7 +11,7 @@
 
 		<div class="form-group" name="deskripsi" id="deskripsi">
     		<label for="FormControlTextarea1">Masukan Keluhan Anda :</label>
-        <textarea name="deskripsi" class="form-control" rows="5" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
+        <textarea name="deskripsi" class="form-control" rows="5" placeholder="Masukkan Keluhan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
     		<!-- <textarea class="form-control" id="FormControlTextarea1" rows="4" required></textarea> -->
   		</div>
   		<button type="submit" class="btn btn-primary">Submit</button>
@@ -21,16 +21,36 @@
 	<section class="rekam-medis">
 		<p><h1> Rekam Medis Anda </h1></p>
 		<p>
-			<thread>
-			<table class="table">
-			<tr>
-				<th scope="col"> No </th>
-				<th scope="col"> Keluhan </th>
-				<th scope="col"> Tgl. Diagnosa </th>
-			</tr>
-			</table>
-			</thread>
 	</section>
+	<div class="table-responsive">
+					<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>Keluhan</th>
+								<th>Tanggal</th>
+								<th>Detail</th>
+							</tr>
+						</thead>
+						<tbody>
+								@php
+								$i=1;
+								@endphp
+									@foreach($keluhan_list as $keluhan)
+									<tr>
+										<td>{{$i}}</td>
+										<td>{{ $keluhan->deskripsi }}</td>
+										<td>{{ $keluhan->tanggal }}</td>
+										<td></td>
+									</tr>
+								@php
+								$i++;
+								@endphp
+							@endforeach
+
+						</tbody>
+					</table>
+				</div>
 </body>
 </html>
 @stop
