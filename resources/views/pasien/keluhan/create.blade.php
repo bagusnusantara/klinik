@@ -5,7 +5,7 @@
 <html lang="invalid-feedback" class="no-js">
 <body>
 	<section class= "form-keluhan">
-		<h1> Form Keluhan </h1>
+		<h1> Form Keluhan Kesehatan</h1>
     <form method="POST" action="{{ route('Periksa.store') }}" class="form-horizontal" enctype="multipart/form-data">
     @csrf
 

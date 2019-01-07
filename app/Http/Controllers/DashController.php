@@ -28,25 +28,22 @@ class DashController extends Controller
       {
         $lava = new Lavacharts; // See note below for Laravel
 
-        $population = $lava->DataTable();
-        $population->addDateColumn('Year')
-               ->addNumberColumn('Number of People')
-               ->addRow(['2006', 623452])
-               ->addRow(['2007', 685034])
-               ->addRow(['2008', 716845])
-               ->addRow(['2009', 757254])
-               ->addRow(['2010', 778034])
-               ->addRow(['2011', 792353])
-               ->addRow(['2012', 839657])
-               ->addRow(['2013', 842367])
-               ->addRow(['2014', 873490]);
+              $skor = $lava->DataTable();
 
-        $lava->AreaChart('Population', $population, [
-        'title' => 'Population Growth',
-        'legend' => [
-            'position' => 'in'
-        ]
-        ]);
+              $skor->addDateColumn('Tanggal Periksa')
+             ->addNumberColumn('Skor')
+             ->addRow(['2018-10-1',  67])
+             ->addRow(['2018-11-2',  68])
+             ->addRow(['2019-1-3',  68])
+             ->addRow(['2019-2-4',  72])
+             ->addRow(['2019-3-5',  61])
+             ->addRow(['2019-4-6',  70])
+             ->addRow(['2019-5-7',  74]);
+
+
+            $lava->LineChart('Temps', $skor, [
+                'title' => 'Skor Pemeriksaan Poedji Rochjati'
+            ]);
            return view('dashboard',compact('lava'));
       }
     }
