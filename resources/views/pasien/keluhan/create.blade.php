@@ -14,7 +14,7 @@
         <textarea name="deskripsi" class="form-control" rows="5" placeholder="Masukkan Keluhan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
     		<!-- <textarea class="form-control" id="FormControlTextarea1" rows="4" required></textarea> -->
   		</div>
-  		<button type="submit" class="btn btn-primary">Submit</button>
+  		<button type="submit" class="genric-btn primary info">Submit</button>
 	</form>
 	</section>
 
@@ -41,7 +41,7 @@
 										<td>{{$i}}</td>
 										<td>{{ $keluhan->deskripsi }}</td>
 										<td>{{ $keluhan->tanggal }}</td>
-										<td></td>
+										<td><a href="#" class="genric-btn primary small">Detail</a></a></td>
 									</tr>
 								@php
 								$i++;

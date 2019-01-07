@@ -20,7 +20,7 @@ Route::resource('/RekamMedis','RekamMedisController');
 Route::resource('/TabelPR','TabelPRController');
 Route::resource('/Diagnosa','DiagnosaController');
 Route::resource('/ListPasien','ListPasienController');
-
+Route::resource('/Masukan','MasukanController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

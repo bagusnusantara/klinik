@@ -24,6 +24,7 @@
           @can('isPasien')
           <li class="menu-has-children"><a href="{{ url('Dashboard')}}">Dashboard</a></li>
           <li><a href="{{ url('Periksa')}}">Periksa</a></li>
+          <li><a href="{{ url('Masukan')}}">Masukan dan Saran</a></li>
           @endcan
           @can('isDokter')
           <li><a href="{{ url('ListPasien')}}">List Antrian Pasien</a></li>

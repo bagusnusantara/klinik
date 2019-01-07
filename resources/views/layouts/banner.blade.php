@@ -12,6 +12,14 @@
         <h1 class="text-white">
             Periksa
 				</h1>
+        @elseif ((url()->current()) == (url('/ListPasien')))
+        <h1 class="text-white">
+            List Antrian Pasien
+				</h1>
+        @elseif ((url()->current()) == (url('/Rekam Medis')))
+        <h1 class="text-white">
+            Histori Rekam Medis
+				</h1>
         @endif
       </div>
     </div>

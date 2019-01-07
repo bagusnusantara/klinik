@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
@@ -75,7 +76,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'nik' => $data['nik'],
             'tempat_lahir' => $data['tempat_lahir'],
-            'tgl_lahir' => $data['tgl_lahir'],
+            'tgl_lahir' => Carbon::parse($data['tgl_lahir'])->format('Y-m-d'),
             'alamat_tinggal' => $data['alamat_tinggal'],
             'alamat_asal' => $data['alamat_asal'],
             'no_telp' => $data['no_telp'],
