@@ -22,6 +22,7 @@ class PasienController extends Controller
         $data = [];
         foreach ($keluhan as $item) {
             $data[] = [
+                'id_user' => $item->id_user,
                 'id_keluhan' => $item->id_keluhan,
                 'deskripsi' => $item->deskripsi,
                 'tanggal' => $item->tanggal,

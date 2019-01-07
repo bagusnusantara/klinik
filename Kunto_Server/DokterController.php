@@ -20,15 +20,15 @@ class DokterController extends Controller
     	$now = \Carbon\Carbon::today();
     	$now = $now->toDateString();
     	$antrian = Keluhan::all()->where('tanggal', $now);
-    	// $data = [];
-    	// foreach ($antrian as $item) {
-    	// 	$data[] = [
-    	// 		'id_user' => $antrian->id_user,
-    	// 		'id_keluhan' => $antrian->id_keluhan,
-    	// 		'deskripsi' => $antrian->deskripsi,
-    	// 		'tanggal' => $antrian->tanggal,
-    	// 	];
-    	// }
-    	return response()->json($antrian->id_user, $this->successStatus);
+         $data = [];
+         foreach ($antrian as $item) {
+             $data[] = [
+                 'id_user' => $item->id_user,
+                 'id_keluhan' => $item->id_keluhan,
+                 'deskripsi' => $item->deskripsi,
+                 'tanggal' => $item->tanggal,
+             ];
+         }
+    	return response()->json($data, $this->successStatus);
     }
 }
