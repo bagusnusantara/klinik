@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Keluhan;
 use App\TransMedisFisik;
+Use App\User;
 use Carbon\Carbon;
 
 

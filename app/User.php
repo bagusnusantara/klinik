@@ -16,8 +16,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 
-        'email', 
+        'name',
+        'email',
         'password',
         'nik',
         'tempat_lahir',
@@ -28,7 +28,7 @@ class User extends Authenticatable
         'alamat_asal',
         'no_telp',
         'pekerjaan',
-        'roles', 
+        'roles',
     ];
 
     /**
@@ -46,5 +46,10 @@ class User extends Authenticatable
 
     public function getUserRole() {
         return $this->roles;
+    }
+
+    public function Keluhan()
+    {
+      return $this->hasMany('App\Keluhan');
     }
 }

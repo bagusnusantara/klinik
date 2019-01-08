@@ -14,7 +14,7 @@
   <!-- meta character set -->
   <meta charset="UTF-8">
   <!-- Site Title -->
-  <title>Medical</title>
+  <title>Klinik Graha Amani</title>
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--
@@ -37,7 +37,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 col-sm-6 col-4 header-top-left">
-              <a href="telp : 021 - 42424242 "><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">021 - 42424242</span></span></a>
+              <a href="telp : 031 - 7871434  "><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">031 - 7871434</span></span></a>
               <a href="mailto:support@infodata.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@infodata.com</span></span></a>
             </div>
             <div class="col-lg-6 col-sm-6 col-8 header-top-right">
@@ -109,18 +109,72 @@
             </p>
             <ul class="time-list">
               <li class="d-flex justify-content-between">
-                <span>Senin - Jumat</span>
-                <span>08.00 Pagi - 10.00 Malam</span>
+                <span>Jadwal Praktek Dokter Spesialis Kandungan :</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Senin</span>
+                <span>19.30 WIB - selesai</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Selasa</span>
+                <span>16.30 WIB - selesai</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Rabu</span>
+                <span>16.30 WIB - 18.00 WIB dan 19.30 WIB - 21.00 WIB</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Kamis</span>
+                <span>16.30 WIB - 19.00 WIB dan 19.30 WIB - selesai</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Jum'at</span>
+                <span>19.30 WIB - 21.00 WIB</span>
               </li>
               <li class="d-flex justify-content-between">
                 <span>Sabtu</span>
-                <span>08.00 Pagi - 05.00 Sore</span>
+                <span>16.30 WIB - 19.00 WIB</span>
               </li>
               <li class="d-flex justify-content-between">
-                <span>Minggu</span>
-                <span>Tutup</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Jadwal Praktek Dokter Spesialis Anak :</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Senin</span>
+                <span>18.00 WIB - 19.30 WIB dan 20.00 -21.30 WIB</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Selasa</span>
+                <span>20.00 WIB - 21.30 WIB</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Rabu</span>
+                <span>19.30 WIB - 21.00 WIB</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Kamis</span>
+                <span>20.00 WIB - 21.30 WIB</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Jum'at</span>
+                <span>20.00 WIB - 21.30 WIB</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Sabtu</span>
+                <span>16.30 WIB - 18.00 WIB</span>
+              </li>
+              <li class="d-flex justify-content-between">
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Jadwal Praktek Bidan</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Setiap Hari</span>
+                <span>24 Jam</span>
               </li>
             </ul>
+
           </div>
           <div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60">
             @include('auth.register_form')
@@ -315,7 +369,8 @@
 
       <section class="maps googleapis">
         <p> <h1><center>Temukan Kami </h1></p>
-        <div class="mapouter"><div class="gmap_canvas"><iframe width=100% height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=ITS%20surabaya&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width=100% height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=ITS%20surabaya&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe> -->
+          <div class="mapouter"><div class="gmap_canvas"><iframe width=100% height="400" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.8320786827517!2d112.6495755!3d-7.372710100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e2c1ffb44b6f%3A0x4af9204245931e35!2sKlinik+Graha+Amani!5e0!3m2!1sid!2sid!4v1546890264156" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       </section>
 
 
@@ -329,9 +384,14 @@
             <div class="single-footer-widget">
               <h6>Layanan</h6>
               <ul class="footer-nav">
-                <li><a href="#">Management Website</a></li>
-                <li><a href="#">Konsultasi</a></li>
-                <li><a href="#">Keluarga Berencana</a></li>
+                <li><a href="#">Praktek Dokter Spesialis</a></li>
+                <li><a href="#">Pelayanan BKIA (Balai Kesehatan Ibu dan Anak) oleh Bidan terlatih</a></li>
+                <!-- <li><a href="#">Graha Amani Farma (Pelayanan Farmasi)</a></li> -->
+                <!-- <li><a href="#">Graha Vaksin Amani (Pelayanan vaksin anak dan dewasa secara paripurna dan terjangkau)</a></li>
+                <li><a href="#">Baby Spa dan baby massage</a></li>
+                <li><a href="#">Pelayanan home care</a></li>
+                <li><a href="#">Cukur rambut bayi</a></li>
+                <li><a href="#">Pertolongan persalinan normal 24 jam oleh bidan atau dokter spesialis kandungan</a></li> -->
               </ul>
             </div>
           </div>
@@ -340,10 +400,10 @@
             <div class="single-footer-widget mail-chimp">
               <h6 class="mb-20">Hubungi Kami</h6>
               <p>
-                Klinik Bersalin Darma Husada, Sukolilo, Surabaya. 60111
+                Klinik Bersalin Graha Amani, Ruko Citra Harmoni, Sidoarjo.
               </p>
-              <h3>021-78787878</h3>
-              <h3>0812 3543 1313</h3>
+              <h3>031-7871434</h3>
+              <h3>082231212140</h3>
             </div>
           </div>
 
@@ -372,7 +432,7 @@
 
         <div class="row footer-bottom d-flex justify-content-between">
           <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://infodata.co.id" target="_blank">PT. Infodata</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://infodata.co.id" target="_blank">Klinik Graha Amani</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           <div class="col-lg-4 col-sm-12 footer-social">
             <a href="#"><i class="fa fa-facebook"></i></a>

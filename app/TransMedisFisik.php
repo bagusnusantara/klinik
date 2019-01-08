@@ -14,5 +14,5 @@ class TransMedisFisik extends Model
       'deskripsi',
 
     ];
-
+  
 }

@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Keluhan;
-use App\TransMedisFisik;
+use App\Masukan;
 use Carbon\Carbon;
 
 
-class RekamMedisController extends Controller
+class MasukanController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -26,25 +25,25 @@ class RekamMedisController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
      public function index()
       {
-           $list_pasien = Keluhan::all();
-           return view('dokter.rekammedis.index',compact('list_pasien'));
+           return view('pasien.masukan.index');
       }
-      public function create()
-      {
-      }
-      public function edit($id_keluhan)
-      {
-        $list_pasien = Keluhan::find($id_keluhan);
-        return view('dokter.pemeriksaan_fisik.create',compact('list_pasien'));
-      }
+
       public function store(Request $request)
       {
         $this->validate($request,[
         ]);
-        $periksa = TransMedisFisik::create($request->all());
-        $periksa->save();
-       return redirect()->back();
+        //$id_user = Session::get('id');
+        $id_user = \Auth::user()->id;
+        $tanggal = Carbon::now()->toDateTimeString();
+        $masukan = new Masukan();
+        $masukan->deskripsi = $request->deskripsi;
+        $masukan->id_user = $id_user;
+        $masukan->tanggal = $tanggal;
+        $masukan->save();
+
+        return redirect()->route('Masukan.index');
       }
     }

@@ -7,9 +7,14 @@
         <div class="single-footer-widget">
           <h6>Layanan</h6>
           <ul class="footer-nav">
-            <li><a href="#">Management Website</a></li>
-            <li><a href="#">Konsultasi</a></li>
-            <li><a href="#">Keluarga Berencana</a></li>
+            <li><a href="#">Praktek Dokter Spesialis</a></li>
+            <li><a href="#">Pelayanan BKIA (Balai Kesehatan Ibu dan Anak) oleh Bidan terlatih</a></li>
+            <!-- <li><a href="#">Graha Amani Farma (Pelayanan Farmasi)</a></li> -->
+            <!-- <li><a href="#">Graha Vaksin Amani (Pelayanan vaksin anak dan dewasa secara paripurna dan terjangkau)</a></li>
+            <li><a href="#">Baby Spa dan baby massage</a></li>
+            <li><a href="#">Pelayanan home care</a></li>
+            <li><a href="#">Cukur rambut bayi</a></li>
+            <li><a href="#">Pertolongan persalinan normal 24 jam oleh bidan atau dokter spesialis kandungan</a></li> -->
           </ul>
         </div>
       </div>
@@ -18,10 +23,10 @@
         <div class="single-footer-widget mail-chimp">
           <h6 class="mb-20">Hubungi Kami</h6>
           <p>
-            Klinik Bersalin Darma Husada, Sukolilo, Surabaya. 60111
+            Klinik Bersalin Graha Amani, Ruko Citra Harmoni, Sidoarjo.
           </p>
-          <h3>021-78787878</h3>
-          <h3>0812 3543 1313</h3>
+          <h3>031-7871434</h3>
+          <h3>082231212140</h3>
         </div>
       </div>
 
@@ -50,7 +55,7 @@
 
     <div class="row footer-bottom d-flex justify-content-between">
       <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://infodata.co.id" target="_blank">PT. Infodata</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://infodata.co.id" target="_blank">Klinik Graha Amani</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
       <div class="col-lg-4 col-sm-12 footer-social">
         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -62,3 +67,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   </div>
 </footer>
 </section>
+<!-- End footer Area -->
