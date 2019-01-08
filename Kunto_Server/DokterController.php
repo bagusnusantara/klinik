@@ -19,27 +19,19 @@ class DokterController extends Controller
     public function getAntrianPasien() {
     	$now = \Carbon\Carbon::today();
     	$now = $now->toDateString();
-    	$antrian = Keluhan::all()->where('tanggal', $now);
-         $data = [];
-         foreach ($antrian as $item) {
-             $data[] = [
-                 'id_user' => $item->id_user,
-                 'id_keluhan' => $item->id_keluhan,
-                 'deskripsi' => $item->deskripsi,
-                 'tanggal' => $item->tanggal,
-             ];
-         }
-    	return response()->json($data, $this->successStatus);
+    	$antrian = Keluhan::where('tanggal', $now)->get();
+    	return response()->json($antrian, $this->successStatus);
     }
     
     public function getDetailAntrian($id) {
-        $detail = Keluhan::all()->where('id_keluhan', $id);
-        $pasien = User::find($detail->id_user);
+        $detail = Keluhan::find($id);
+        $pasien = User::find($detail->id);
         return response()->json([
-            'id_user' => $detail->id_user,
+            'id' => $detail->id,
             'id_keluhan' => $detail->id_keluhan,
-            'nama' => $pasien->nama,
+            'nama' => $pasien->name,
             'deskripsi' => $detail->deskripsi,
+            'tanggal' => $detail->tanggal,
             'no_telp' => $pasien->no_telp,
         ], $this->successStatus);
     }
