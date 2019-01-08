@@ -31,4 +31,16 @@ class DokterController extends Controller
          }
     	return response()->json($data, $this->successStatus);
     }
+    
+    public function getDetailAntrian($id) {
+        $detail = Keluhan::all()->where('id_keluhan', $id);
+        $pasien = User::find($detail->id_user);
+        return response()->json([
+            'id_user' => $detail->id_user,
+            'id_keluhan' => $detail->id_keluhan,
+            'nama' => $pasien->nama,
+            'deskripsi' => $detail->deskripsi,
+            'no_telp' => $pasien->no_telp,
+        ], $this->successStatus);
+    }
 }
