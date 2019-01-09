@@ -15,8 +15,12 @@ class Keluhan extends Model
       'deskripsi',
 
     ];
-    public function user()
-      {
+
+    public function user() {
         return $this->belongsTo('App\User');
-      }
+    }
+
+    public function rekammedis() {
+        return $this->hasOne('App\TransMedisFisik');
+    }
 }

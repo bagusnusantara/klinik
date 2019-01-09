@@ -19,11 +19,11 @@ class PasienController extends Controller
     }
 
     public function getListKeluhanByID($id) {
-    	$keluhan = Keluhan::all()->where('id_user', $id);
+    	$keluhan = Keluhan::all()->where('id', $id);
         $data = [];
         foreach ($keluhan as $item) {
             $data[] = [
-                'id_user' => $item->id_user,
+                'id_user' => $item->id,
                 'id_keluhan' => $item->id_keluhan,
                 'deskripsi' => $item->deskripsi,
                 'tanggal' => $item->tanggal,
@@ -53,8 +53,18 @@ class PasienController extends Controller
     }
 
     public function getListRekamMedic($id) {
-        $rekamMedic = TransMedisFisik::where('users_id', $id);
-        return response()->json($rekamMedic, $this->successStatus);
+        $rekamMedic = TransMedisFisik::where('users_id', $id)->get();
+        $data = [];
+        foreach ($rekamMedic as $item) {
+            $data[] = [
+                'id' => $item->id,
+                'trans_keluhan_id' => $item->trans_keluhan_id,
+                'users_id' => $item->users_id,
+                'tgl_pemeriksaan' => $item->tgl_pemeriksaan,
+                'deskripsi' => $item->keluhan->deskripsi,
+            ];
+        }
+        return response()->json($data, $this->successStatus);
     }
 
     public function getDetailsRekamMedicByID() {
