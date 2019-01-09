@@ -19,8 +19,10 @@ Route::get('details', 'API\UserController@details');
 Route::group(['middleware' => ['pasien']], function() {
     Route::get('pasien/profile/{id}', 'API\PasienController@getPasienByID');
     Route::get('pasien/keluhan/{id}', 'API\PasienController@getListKeluhanByID');
+    Route::get('pasien/keluhan/detail/{id}', 'API\PasienController@getDetailsKeluhanByID');
     Route::post('pasien/keluhan', 'API\PasienController@storeKeluhan');
     Route::get('pasien/rekammedis/{id}', 'API\PasienController@getListRekamMedic');
+    Route::get('pasien/rekammedis/detail/{id}', 'API\PasienController@getDetailsRekamMedicByID');
 });
 
 Route::group(['middleware' => ['dokter']], function() {

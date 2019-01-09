@@ -32,8 +32,14 @@ class PasienController extends Controller
         return response()->json($data, $this->successStatus);
     }
 
-    public function getDetailsKeluhanByID() {
-
+    public function getDetailsKeluhanByID($id) {
+        $detail = Keluhan::find($id);
+        $pasien = User::find($detail->id);
+        return response()->json([
+            'nama' => $pasien->name,
+            'deskripsi' => $detail->deskripsi,
+            'tanggal' => $detail->tanggal,
+        ], $this->successStatus);
     }
     
     public function storeKeluhan(Request $request) {
@@ -67,15 +73,12 @@ class PasienController extends Controller
         return response()->json($data, $this->successStatus);
     }
 
-    public function getDetailsRekamMedicByID() {
-
+    public function getDetailsRekamMedicByID($id) {
+        $detail = TransMedisFisik::find($id);
+        return response()->json($detail, $this->successStatus);
     }
 
     public function getDetailsTabelPoedjiRochjatiByID() {
-
-    }
-
-    public function getDataGrafikPoedjiRochjati() {
 
     }
 }
