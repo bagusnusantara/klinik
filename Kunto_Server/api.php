@@ -20,6 +20,7 @@ Route::group(['middleware' => ['pasien']], function() {
     Route::get('pasien/profile/{id}', 'API\PasienController@getPasienByID');
     Route::get('pasien/keluhan/{id}', 'API\PasienController@getListKeluhanByID');
     Route::post('pasien/keluhan', 'API\PasienController@storeKeluhan');
+    Route::get('pasien/rekammedis/{id}', 'API\PasienController@getListRekamMedic');
 });
 
 Route::group(['middleware' => ['dokter']], function() {

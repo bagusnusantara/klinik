@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\TransMedisFisik;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
@@ -51,8 +52,9 @@ class PasienController extends Controller
         return response()->json(['success' => $success['status']], $this->successStatus);
     }
 
-    public function getListRekamMedic() {
-
+    public function getListRekamMedic($id) {
+        $rekamMedic = TransMedisFisik::where('users_id', $id);
+        return response()->json($rekamMedic, $this->successStatus);
     }
 
     public function getDetailsRekamMedicByID() {
