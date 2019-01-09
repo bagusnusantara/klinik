@@ -30,6 +30,10 @@ class PasienController extends Controller
         }
         return response()->json($data, $this->successStatus);
     }
+
+    public function getDetailsKeluhanByID() {
+
+    }
     
     public function storeKeluhan(Request $request) {
         $validator = Validator::make($request->all(), [
@@ -45,5 +49,21 @@ class PasienController extends Controller
         $success['status'] = 'data berhasil dimasukkan';
         
         return response()->json(['success' => $success['status']], $this->successStatus);
+    }
+
+    public function getListRekamMedic() {
+
+    }
+
+    public function getDetailsRekamMedicByID() {
+
+    }
+
+    public function getDetailsTabelPoedjiRochjatiByID() {
+
+    }
+
+    public function getDataGrafikPoedjiRochjati() {
+
     }
 }
