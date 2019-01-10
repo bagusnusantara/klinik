@@ -36,7 +36,8 @@ class PasienController extends Controller
         $detail = Keluhan::find($id);
         $pasien = User::find($detail->id);
         return response()->json([
-            'nama' => $pasien->name,
+            'id_user' => $detail->id,
+            'id_keluhan' => $detail->id_keluhan,
             'deskripsi' => $detail->deskripsi,
             'tanggal' => $detail->tanggal,
         ], $this->successStatus);

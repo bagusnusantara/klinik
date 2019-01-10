@@ -50,6 +50,6 @@ class User extends Authenticatable
 
     public function Keluhan()
     {
-      return $this->hasMany('App\Keluhan');
+      return $this->hasMany('App\Keluhan', 'id');
     }
 }
