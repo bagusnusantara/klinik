@@ -2,6 +2,7 @@
 <html lang="zxx" class="no-js">
 <head>
 @include('layouts/head')
+@yield('head')
 </head>
   <body>
     @include('layouts/navbar')
@@ -9,6 +10,7 @@
     <!-- Start our-mission Area -->
 			<section class="our-mission-area section-gap">
 				<div class="container">
+                    @yield('contents')
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
@@ -46,5 +48,7 @@
     <script src="{{ asset('medical/js/mail-script.js') }}"></script>
     <script src="{{ asset('medical/js/main.js') }}"></script>
     @include('layouts.js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    @include('sweet::alert')
   </body>
 </html>

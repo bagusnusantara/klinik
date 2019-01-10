@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class TranPudji extends Model
+class TransPudji extends Model
 {
   protected $table = 'trans_pudji';
   public $timestamps = false;

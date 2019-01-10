@@ -2,11 +2,12 @@
 
 namespace App;
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, Notifiable;
 
@@ -50,6 +51,6 @@ class User extends Authenticatable
 
     public function Keluhan()
     {
-      return $this->hasMany('App\Keluhan');
+      return $this->hasMany('App\Keluhan','id');
     }
 }

@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\TransPudji;
 use Session;
 
 
@@ -30,7 +31,7 @@ class PeriksaController extends Controller
      */
      public function index()
       {
-           $keluhan_list = Keluhan::all()->where('id_user',\Auth::user()->id);
+           $keluhan_list = Keluhan::all()->where('id',\Auth::user()->id);
            return view('pasien.keluhan.create',compact('keluhan_list'));
       }
 
@@ -39,15 +40,23 @@ class PeriksaController extends Controller
         $this->validate($request,[
         ]);
         //$id_user = Session::get('id');
-        $id_user = \Auth::user()->id;
+        $id = \Auth::user()->id;
         $tanggal = Carbon::now()->toDateTimeString();
         $keluhan = new Keluhan();
         $keluhan->deskripsi = $request->deskripsi;
-        $keluhan->id_user = $id_user;
+        $keluhan->id = $id;
         $keluhan->tanggal = $tanggal;
         $keluhan->save();
 
         return redirect()->route('Periksa.index');
+      }
+      public function show($id_keluhan)
+      {
+        $list_pasien = Keluhan::find($id_keluhan);
+        $tabel_pr = TransPudji::where('trans_keluhan_id', $list_pasien->id_keluhan )->get();
+         // dd($tabel_pr);
+        //return response()->json($tabel_pr, 200);
+        return view('pasien.keluhan.show',compact('list_pasien','tabel_pr'));
       }
 
     }

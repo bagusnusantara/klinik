@@ -27,7 +27,7 @@
 									@foreach($list_pasien as $pasien)
 									<tr>
 										<td>{{$i}}</td>
-                    <td>{{ $pasien->id }}</td>
+                    <td>{{ $pasien->user->name }}</td>
 										<td>{{ $pasien->deskripsi }}</td>
 										<td>{{ $pasien->tanggal }}</td>
 										<td>

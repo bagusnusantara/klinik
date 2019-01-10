@@ -3,13 +3,19 @@
 <div class="form-group row">
     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ID Pasien') }}</label>
     <div class="col-md-6">
-        <input id="name" type="text" class="form-control" placeholder="{{ $list_pasien->id_user }}" >
+        <input id="name" type="text" class="form-control" value="{{ $list_pasien->id }}" readonly="readonly">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="users_id" class="col-md-4 col-form-label text-md-right">{{ __('Nama') }}</label>
+    <div class="col-md-6">
+        <input id="users_id" type="text" class="form-control" value="{{ $list_pasien->user->name }}" name="users_id" readonly="readonly">
     </div>
 </div>
 <div class="form-group row">
     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ID Keluhan') }}</label>
     <div class="col-md-6">
-        <input id="name" type="text" class="form-control" placeholder="{{ $list_pasien->id_keluhan }}" >
+        <input id="name" type="text" class="form-control" value="{{ $list_pasien->id_keluhan }}" readonly="readonly">
     </div>
 </div>
 <div class="form-group row">
@@ -59,6 +65,12 @@
       <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Planning') }}</label>
       <div class="col-md-6">
         <textarea name="riwayat_alergi" class="form-control" rows="3" placeholder="" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
+      </div>
+  </div>
+  <div class="form-group row">
+      <label for="tgl_lahir" class="col-md-4 col-form-label text-md-right">{{ __('Tanggal Pemeriksaan Selanjutnya') }}</label>
+      <div class="col-md-6">
+          <input id="datepicker1" type="text" name="tgl_lahir" class="dates form-control">
       </div>
   </div>
 

@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Khill\Lavacharts\Lavacharts;
+use App\User;
+use Alert;
 
 
 class DashController extends Controller
@@ -44,6 +46,8 @@ class DashController extends Controller
             $lava->LineChart('Temps', $skor, [
                 'title' => 'Skor Pemeriksaan Poedji Rochjati'
             ]);
-           return view('dashboard',compact('lava'));
+            $user = User::all()->where('id',\Auth::user()->id);
+            Alert::success('Selamat Datang di Sistem Informasi Klinik Graha Amani', 'Selamat Datang');
+            return view('dashboard',compact('lava','user'));
       }
     }

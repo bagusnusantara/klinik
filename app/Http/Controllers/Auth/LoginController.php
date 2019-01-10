@@ -32,17 +32,9 @@ class LoginController extends Controller
         elseif($user->roles=='pasien'){
           return redirect('Dashboard') ;
           }
-       // if($request->user()->getUserRole('dokter')){
-       //   return redirect('ListPasien');
-       //   //return response()->json($request->user()->getUserRole());
-       // }
-       // else if ($request->user()->getUserRole('pasien')) {
-       //   return redirect('Dashboard');
-       //   //return response()->json($request->user()->getUserRole());
-       // }
      }
 
-    //protected $redirectTo = '/Dashboard';
+    //protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.

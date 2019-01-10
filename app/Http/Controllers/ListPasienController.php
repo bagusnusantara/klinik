@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Keluhan;
+use App\TransPudji;
 use App\TransMedisFisik;
 Use App\User;
 use Carbon\Carbon;
@@ -39,7 +40,10 @@ class ListPasienController extends Controller
       public function edit($id_keluhan)
       {
         $list_pasien = Keluhan::find($id_keluhan);
-        return view('dokter.pemeriksaan_fisik.create',compact('list_pasien'));
+        $tabel_pr = TransPudji::where('trans_keluhan_id', $list_pasien->id_keluhan )->get();
+         // dd($tabel_pr);
+        //return response()->json($tabel_pr, 200);
+        return view('dokter.pemeriksaan_fisik.create',compact('list_pasien','tabel_pr'));
       }
       public function store(Request $request)
       {
@@ -47,6 +51,6 @@ class ListPasienController extends Controller
         ]);
         $periksa = TransMedisFisik::create($request->all());
         $periksa->save();
-       return redirect()->back();
+        return redirect()->back();
       }
     }
