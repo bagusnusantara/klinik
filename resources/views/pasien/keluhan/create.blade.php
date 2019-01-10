@@ -5,6 +5,24 @@
 <html lang="invalid-feedback" class="no-js">
 <body>
 	<section class= "form-keluhan">
+		<h1> Form Pemeriksaan</h1>
+    <!-- accordion 2 start-->
+    <dl class="accordion">
+        <dt>
+            <a href="">Form Pemeriksaan Awal Kehamilan</a>
+        </dt>
+        <dd>
+					@include('pasien.keluhan.form_pemeriksaan_awal')
+        </dd>
+        <dt>
+            <a href="">Form Pemeriksaan Selanjutnya</a>
+        </dt>
+        <dd>
+					@include('pasien.keluhan.form_pemeriksaan_selanjutnya')
+        </dd>
+    </dl>
+	</section>
+	<section class= "form-keluhan">
 		<h1> Form Keluhan Kesehatan</h1>
     <form method="POST" action="{{ route('Periksa.store') }}" class="form-horizontal" enctype="multipart/form-data">
     @csrf
@@ -12,8 +30,7 @@
 		<div class="form-group" name="deskripsi" id="deskripsi">
     		<label for="FormControlTextarea1">Masukan Keluhan Anda :</label>
         <textarea name="deskripsi" class="form-control" rows="5" placeholder="Masukkan Keluhan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
-    		<!-- <textarea class="form-control" id="FormControlTextarea1" rows="4" required></textarea> -->
-  		</div>
+  	</div>
   		<button type="submit" class="genric-btn primary info">Submit</button>
 	</form>
 	</section>
@@ -41,7 +58,7 @@
 										<td>{{$i}}</td>
 										<td>{{ $keluhan->deskripsi }}</td>
 										<td>{{ $keluhan->tanggal }}</td>
-										<td><a href="#" class="genric-btn primary small">Detail</a></a></td>
+										<td><a href="{{route('Periksa.show',['id'=>$keluhan->id_keluhan])}}" class="genric-btn primary small">Detail</a></a></td>
 									</tr>
 								@php
 								$i++;

@@ -26,7 +26,10 @@ class LoginController extends Controller
      * @var string
      */
      protected function authenticated($request, $user){
-         if($user->roles=='dokter'){
+        if($user->roles == 'admin'){
+          return redirect('ListAccount');
+        }
+        elseif($user->roles=='dokter'){
            return redirect('ListPasien') ;
           }
         elseif($user->roles=='pasien'){

@@ -11,7 +11,7 @@
 <!-- meta character set -->
 <meta charset="UTF-8">
 <!-- Site Title -->
-<title>3D-QlinikⓇ</title>
+<title>Klinik Graha Amani</title>
 
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
   <!--
@@ -30,3 +30,4 @@
 
   <!-- Page level plugin CSS-->
   <link href="{{ asset('assets/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">

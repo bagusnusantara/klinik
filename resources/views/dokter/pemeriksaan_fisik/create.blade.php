@@ -26,6 +26,18 @@
         <dd>
           @include('dokter.pemeriksaan_fisik.form_tp')
         </dd>
+				<dt>
+            <a href="">Detail Tabel Pemeriksaan</a>
+        </dt>
+        <dd>
+          @include('dokter.pemeriksaan_fisik.show_pemeriksaan')
+        </dd>
+				<dt>
+            <a href="">Detail Tabel Skor Poedji Rochjati</a>
+        </dt>
+        <dd>
+          @include('dokter.pemeriksaan_fisik.show_tp')
+        </dd>
     </dl>
     <!-- accordion 2 end-->
 		<!-- <div class="form-group" name="deskripsi" id="deskripsi">
