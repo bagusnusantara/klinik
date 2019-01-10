@@ -23,6 +23,7 @@ Route::group(['middleware' => ['pasien']], function() {
     Route::post('pasien/keluhan', 'API\PasienController@storeKeluhan');
     Route::get('pasien/rekammedis/{id}', 'API\PasienController@getListRekamMedic');
     Route::get('pasien/rekammedis/detail/{id}', 'API\PasienController@getDetailsRekamMedicByID');
+    Route::post('pasien/kritiksaran', 'API\PasienController@storeKritikSaran');
 });
 
 Route::group(['middleware' => ['dokter']], function() {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Masukan;
 use App\TransMedisFisik;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -19,12 +20,13 @@ class PasienController extends Controller
     }
 
     public function getListKeluhanByID($id) {
-    	$keluhan = Keluhan::all()->where('id', $id);
+    	$keluhan = Keluhan::where('id', $id)->get();
         $data = [];
         foreach ($keluhan as $item) {
             $data[] = [
                 'id_user' => $item->id,
                 'id_keluhan' => $item->id_keluhan,
+                'nama' => $item->user->name,
                 'deskripsi' => $item->deskripsi,
                 'tanggal' => $item->tanggal,
             ];
@@ -34,10 +36,10 @@ class PasienController extends Controller
 
     public function getDetailsKeluhanByID($id) {
         $detail = Keluhan::find($id);
-        $pasien = User::find($detail->id);
         return response()->json([
             'id_user' => $detail->id,
             'id_keluhan' => $detail->id_keluhan,
+            'nama' => $detail->user->name,
             'deskripsi' => $detail->deskripsi,
             'tanggal' => $detail->tanggal,
         ], $this->successStatus);
@@ -49,14 +51,20 @@ class PasienController extends Controller
         ]);
         
         if ($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 401);
+            return response()->json(['status' => $validator->errors()], 401);
         }
-        
-        $input = $request->all();
-        $success = Keluhan::create($input);
-        $success['status'] = 'data berhasil dimasukkan';
-        
-        return response()->json(['success' => $success['status']], $this->successStatus);
+
+        $keluhan = new Keluhan();
+        $keluhan->id = $request->id;
+        $keluhan->deskripsi = $request->deskripsi;
+        $keluhan->tanggal = $request->tanggal;
+        if ($keluhan->save()) {
+            $success['status'] = 'data berhasil dimasukkan';
+            return response()->json(['status' => $success['status']], $this->successStatus);
+        } else {
+            $success['status'] = 'data gagal dimasukkan';
+            return response()->json(['status' => $success['status']], 401);
+        }
     }
 
     public function getListRekamMedic($id) {
@@ -81,5 +89,27 @@ class PasienController extends Controller
 
     public function getDetailsTabelPoedjiRochjatiByID() {
 
+    }
+
+    public function storeKritikSaran(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'deskripsi' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json(['status' => $validator->errors()], 401);
+        }
+
+        $kritik_saran = new Masukan();
+        $kritik_saran->id_user = $request->id_user;
+        $kritik_saran->deskripsi = $request->deskripsi;
+        $kritik_saran->tanggal = $request->tanggal;
+        if ($kritik_saran->save()) {
+            $success['status'] = 'data berhasil dimasukkan';
+            return response()->json(['status' => $success['status']], $this->successStatus);
+        } else {
+            $success['status'] = 'data gagal dimasukkan';
+            return response()->json(['status' => $success['status']], 401);
+        }
     }
 }
